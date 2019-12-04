@@ -1,12 +1,25 @@
 from flask import Flask, render_template, request
 # from firebase import firebase
-import configurations
+# import configurations
 import pyrebase
+
+config = {
+       
+  'apiKey': "AIzaSyACAssH2w9e7NJp-vULkwNbIFngGokKNt8",
+  'authDomain': "test-63d5a.firebaseapp.com",
+  'databaseURL': "https://test-63d5a.firebaseio.com/",
+  'projectId': "test-63d5a",
+  'storageBucket': "test-63d5a.appspot.com",
+  'messagingSenderId': "665581966414",
+
+}
+
 
 app = Flask(__name__)
 email = "null"
 
-firebsevar = pyrebase.initialize_app(config=configurations.config)
+# firebsevar = pyrebase.initialize_app(config=configurations.config)
+firebsevar = pyrebase.initialize_app(config)
 db = firebsevar.database()
 
 

@@ -7,7 +7,17 @@ import requests
 from fuzzywuzzy import fuzz
 
 import cosine_similarity as keywordVal
-import configurations
+# import configurations
+config = {
+       
+  'apiKey': "AIzaSyACAssH2w9e7NJp-vULkwNbIFngGokKNt8",
+  'authDomain': "test-63d5a.firebaseapp.com",
+  'databaseURL': "https://test-63d5a.firebaseio.com/",
+  'projectId': "test-63d5a",
+  'storageBucket': "test-63d5a.appspot.com",
+  'messagingSenderId': "665581966414",
+
+}
 
 
 def givVal(model_answer, keywords, answer, out_of):
@@ -41,7 +51,8 @@ def givVal(model_answer, keywords, answer, out_of):
     result = predicted * out_of / 10
     return result[0]
 
-firebsevar = pyrebase.initialize_app(config=configurations.config)
+# firebsevar = pyrebase.initialize_app(config=configurations.config)
+firebsevar = pyrebase.initialize_app(config)
 db = firebsevar.database()
 
 model_answer1 = db.child("model_answers").get().val()[1]['answer']
