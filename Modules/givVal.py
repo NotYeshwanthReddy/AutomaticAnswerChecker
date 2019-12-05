@@ -22,7 +22,7 @@ config = {
 
 def givVal(model_answer, keywords, answer, out_of):
     # for keywords
-    if (len(answer.split())) <= 5:
+    if (len(answer.split())) <= 5 :
         return 0
         
     k = keywordVal.givKeywordsValue(model_answer, answer)
