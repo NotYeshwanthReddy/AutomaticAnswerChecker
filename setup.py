@@ -1,13 +1,13 @@
 from setuptools import setup
 
 setup(
-	name=='CapTest2019'
+	name=='AutomaticAnswerChecker'
 	version='1.0'
-	description='Testing Flask application'
+	description=''
 	licence="NONE"
 	author="Yeshwanth Reddy"
 	author_email="peddamalluyeshwanth1999@gmail.com"
 	url="yeshwanth-reddyy.github.io"
-	packages=['CapTest2019']
-	install_requirements=['flask', 'gunicorn']
+	packages=['AutomaticAnswerChecker']
+	install_requirements=['flask', 'gunicorn', 'requests', 'fuzzywuzzy', 'numpy', 'Pyrebase', 'pandas', 'scikit_learn']
 )
